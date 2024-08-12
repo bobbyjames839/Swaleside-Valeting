@@ -13,7 +13,7 @@ export const Home = () => {
   const Service = ({ price, desc, title, image, extraClass = '' }) => {
     return (
       <div className={`service ${extraClass}`}>
-        <img alt='Home' className='service_image' src={image} alt={title}/>
+        <img alt='Home' className='service_image' src={image}/>
         <div className='service_inner'>
           <p className='service_price'>{price}</p>
           <div className='service_inner_inner'>
