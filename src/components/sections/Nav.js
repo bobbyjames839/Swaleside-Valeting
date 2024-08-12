@@ -6,7 +6,7 @@ export const Nav = () => {
   return (
     <div className="nav">
       <div className="nav_section nav_left">
-        <img className="logo" src={logo}/>
+        <img alt="Logo" className="logo" src={logo}/>
       </div>
 
       <div className="nav_section nav_right">

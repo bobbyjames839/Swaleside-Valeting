@@ -24,7 +24,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <img className='footer_image' src={logo}/>
+        <img alt='Footer' className='footer_image' src={logo}/>
       </div>
 
       <p className='footer_note'>Developed by Bobby.</p>

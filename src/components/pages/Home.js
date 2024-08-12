@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 import serviceone from '../images/service_one.jpg';
 import servicetwo from '../images/service_two.jpg';
-import { useState } from 'react';
 import { BeforeAndAfterSection } from '../sections/BeforeAndAfterSection';
 import { Perks } from '../sections/Perks';
 import { Reviews } from '../sections/Reviews';
@@ -14,7 +13,7 @@ export const Home = () => {
   const Service = ({ price, desc, title, image, extraClass = '' }) => {
     return (
       <div className={`service ${extraClass}`}>
-        <img className='service_image' src={image} alt={title}/>
+        <img alt='Home' className='service_image' src={image} alt={title}/>
         <div className='service_inner'>
           <p className='service_price'>{price}</p>
           <div className='service_inner_inner'>

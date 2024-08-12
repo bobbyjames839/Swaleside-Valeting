@@ -9,7 +9,7 @@ export const Perks = () => {
             {!right && 
             <>
             <span className={`perk_span ${(right ? 'perk_span_right' : 'perk_span_left' )}`}></span>
-            <img className='perk_img' src={image}/>
+            <img alt='Perk' className='perk_img' src={image}/>
             </>}
     
             <div className={`perk_info ${class_perk}`}>
@@ -20,7 +20,7 @@ export const Perks = () => {
     
             {right && 
             <>
-            <img className='perk_img' src={image}/>
+            <img alt='Perk' className='perk_img' src={image}/>
             <span className={`perk_span ${(right ? 'perk_span_right' : 'perk_span_left' )}`}></span>
             </>}
           </div>
