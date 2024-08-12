@@ -1,0 +1,96 @@
+/* Reviews */
+
+.reviews {
+    background-color: rgb(240,240,240);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 150px; 
+    align-items: center;  
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    position: relative;
+}
+
+.reviews_scroller {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: url('../images/reviews.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.reviews_track {
+    display: inline-block;
+    display: flex;
+    animation: scroll 50s linear infinite;
+}
+
+.review_item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 35px;
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: rgb(240,240,240);
+    border: 1px solid rgb(100,100,100);
+    box-shadow: 0 0 10px rgb(100,100,100);
+}
+
+.review_top {
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.review_image {
+    height: 45px;
+    width: 45px;
+    border-radius: 100px;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+
+.review_date {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 2px;
+}
+
+.review_stars {
+    font-size: 14px;
+    margin-left: 10px;
+    color: green;
+    letter-spacing: 2px;
+}
+
+.review_desc {
+    font-size: 13px;
+    letter-spacing: .2px;
+    width: 90%;
+    margin-top: 10px;
+    line-height: 1.3;
+    margin-left: 10px;
+    white-space: normal;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-50%); /* Scroll halfway */
+    }
+    100% {
+        transform: translateX(0%); /* Return to the start */
+    }
+}
+  

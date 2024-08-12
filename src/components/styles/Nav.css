@@ -1,0 +1,49 @@
+.nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,0,.7); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(5px); 
+  color: white;
+  border-bottom: 1px solid black;
+}
+
+
+.nav_section {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nav_link {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.logo {
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid rgb(60,60,60);
+}
+
+.book_now {
+  padding: 10px 20px;
+  background-color: var(--yellow);
+  margin-left: 20px;
+  border: 2px solid var(--yellow);
+  cursor: pointer;
+  transition: .3s;
+  font-weight: 600;
+  border-radius: 3px;
+  color: white;
+}
+
+.book_now:hover {
+  background-color: transparent;
+  color: white;
+}

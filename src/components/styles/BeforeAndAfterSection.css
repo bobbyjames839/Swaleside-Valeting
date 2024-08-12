@@ -1,0 +1,93 @@
+/* Before and After */
+
+.before_and_after_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 200px;
+}
+
+.before_and_after_inner {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.baa_hover {
+    top: 5px;
+    position: absolute;
+    color: rgb(120,120,120);
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.5s ease; /* Smooth fade transition */
+    z-index: 2;
+}
+
+.hover_one {
+    left: 10px;
+}
+
+.hover_two {
+    right: 10px;
+}
+
+.baa_container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.baa_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: width 0.5s ease, left 0.5s ease, filter 0.5s ease; /* Transition width, left, and filter */
+}
+
+.baa_two, .baa_four {
+    left: -100%; /* Start off-screen to the left */
+    width: 0;
+}
+
+.shrink-width {
+    width: 0;
+    left: 100%;
+}
+
+.grow-width {
+    left: 0;
+    width: 100%;
+}
+
+.dim-image {
+    filter: brightness(40%); /* Dim the image */
+}
+
+.fade-out-text {
+    opacity: 0; /* Fade out the text */
+}
+
+
+.view_more_baa {
+    margin-top: 40px;
+    font-weight: 600;
+    height: 40px;
+    width: 240px;
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.view_more_baa:hover {
+    background-color: transparent;
+}
