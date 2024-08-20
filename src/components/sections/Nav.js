@@ -30,7 +30,7 @@ export const Nav = () => {
 
     {navDropdown && <div className="nav_dropdown">
       <FontAwesomeIcon className="close_nav_dropdown" icon={faTimes} onClick={() => (setNavDropdown(false))}/>
-      <img src={logo} className="dropdown_logo"/>
+      <img src={logo} alt='Logo' className="dropdown_logo"/>
       <div className="dropdown_links">
         <Link className="nav_dropdown_link" to="/" onClick={() => (setNavDropdown(false))}>Home</Link>
         <Link className="nav_dropdown_link" to="/services" onClick={() => (setNavDropdown(false))}>Services</Link>

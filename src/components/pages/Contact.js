@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/other_styling/Contact.css';
-import contact from '../images/home.jpg';
 
 export const Contact = () => {
     const [selectedService, setSelectedService] = useState('');
