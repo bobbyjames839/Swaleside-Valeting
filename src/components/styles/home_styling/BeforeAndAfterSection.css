@@ -6,10 +6,12 @@
     align-items: center;
     width: 100%;
     padding-bottom: 200px;
+    background-color: var(--darkest);
 }
 
 .before_and_after_inner {
     width: 90%;
+    max-width: 1400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,10 +21,10 @@
 .baa_hover {
     top: 5px;
     position: absolute;
-    color: rgb(120,120,120);
+    color: var(--dark);
     font-size: 14px;
     font-weight: 600;
-    transition: opacity 0.5s ease; /* Smooth fade transition */
+    transition: opacity 0.5s ease;
     z-index: 2;
 }
 
@@ -39,6 +41,15 @@
     width: 100%;
     height: 400px;
     overflow: hidden;
+    border: 1px solid var(--lighter);
+}
+
+.baa_container_left {
+    border-right: none;
+}
+
+.baa_container_right {
+    border-left: none;
 }
 
 .baa_image {
@@ -49,11 +60,11 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: width 0.5s ease, left 0.5s ease, filter 0.5s ease; /* Transition width, left, and filter */
+    transition: width 0.5s ease, left 0.5s ease, filter 0.5s ease; 
 }
 
 .baa_two, .baa_four {
-    left: -100%; /* Start off-screen to the left */
+    left: -100%;
     width: 0;
 }
 
@@ -68,11 +79,11 @@
 }
 
 .dim-image {
-    filter: brightness(40%); /* Dim the image */
+    filter: brightness(40%); 
 }
 
 .fade-out-text {
-    opacity: 0; /* Fade out the text */
+    opacity: 0; 
 }
 
 
@@ -82,12 +93,12 @@
     height: 40px;
     width: 240px;
     background-color: var(--yellow);
-    border: 2px solid var(--yellow);
+    border: none;
     border-radius: 3px;
     cursor: pointer;
     transition: .3s;
 }
 
 .view_more_baa:hover {
-    background-color: transparent;
+    background-color: var(--darkyellow);
 }

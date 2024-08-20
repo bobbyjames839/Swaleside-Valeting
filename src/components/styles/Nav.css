@@ -4,11 +4,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0,0,0,.7); 
+  background-color: var(--darkest); 
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(5px); 
-  color: white;
-  border-bottom: 1px solid black;
+  color: var(--lightest);
 }
 
 
@@ -19,16 +18,35 @@
 }
 
 .nav_link {
-  color: white;
+  color: var(--lightest);
   text-decoration: none;
   margin: 0 10px;
-  font-weight: 600;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative; 
+}
+
+.nav_link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0; 
+  width: 0;
+  height: 2px; 
+  background-color: var(--lightest);
+  transition: width .2s ease-in-out; 
+}
+
+.nav_link:hover::after {
+  width: 100%; 
+  left: 0; 
+  right: auto; 
 }
 
 .logo {
   width: 250px;
   border-radius: 20px;
-  border: 1px solid rgb(60,60,60);
+  border: none;
 }
 
 .book_now {
@@ -37,13 +55,100 @@
   margin-left: 20px;
   border: 2px solid var(--yellow);
   cursor: pointer;
+  font-size: 16px;
   transition: .3s;
   font-weight: 600;
   border-radius: 3px;
-  color: white;
+  color: var(--lightest);
 }
 
 .book_now:hover {
   background-color: transparent;
-  color: white;
+  color: var(--yellow);
+}
+
+.toggle_nav_dropdown {
+  display: none;
+  cursor: pointer;
+  margin-right: 30px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav_dropdown {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--darkest);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  animation: scrollin .3s ease-in-out;
+}
+
+@keyframes scrollin {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.close_nav_dropdown {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 26px;
+  color: var(--lightest);
+  cursor: pointer;
+}
+
+.dropdown_logo {
+  width: 400px;
+  margin: 40px 0 20px 0;
+}
+
+.dropdown_links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nav_dropdown_link {
+  text-decoration: none;
+  color: var(--lightest);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--lighter);
+  width: 70%;
+  text-align: center;
+  font-size: 17px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.nav_dropdown_link:hover {
+  background-color: var(--darker);
+}
+
+
+.book_now_dropdown {
+  margin: 40px 0 0 0;
+}
+
+
+/* Responsive */
+
+@media (max-width: 790px) {
+  .nav_right {
+    display: none;
+  }
+
+  .toggle_nav_dropdown {
+    display: flex;
+  }
 }
