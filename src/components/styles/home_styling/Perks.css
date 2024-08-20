@@ -54,7 +54,7 @@
     background-color: var(--yellow);
     height: 100%;
     width: 30px;
-    min-width: 30px;
+    min-width: 15px;
 }
 
 .perk_span_left {
