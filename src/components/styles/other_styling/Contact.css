@@ -150,6 +150,6 @@
 @media (max-width: 450px) {
     .contact_inner {
         width: calc(100% - 40px);
-        border-radius: none;
+        border-radius: 0px;
     }
 }
