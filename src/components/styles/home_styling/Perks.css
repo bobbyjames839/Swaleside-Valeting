@@ -126,5 +126,9 @@
     .why_choose_inner {
         width: 92%;
     }
+
+    .perk_img {
+        margin: 0 18px;
+    }
   }
 
