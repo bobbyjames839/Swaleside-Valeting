@@ -99,6 +99,7 @@
     font-size: 14px;
     font-weight: 600;
     padding: 8px 0;
+    color: var(--lightest);
 }
 
 .perk_button:hover {
@@ -110,6 +111,16 @@
 @media (max-width: 850px) {
     .perk {
         width: 100%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .perk {
+        height: 280px;
+    }
+
+    .perk_button {
+        width: 120px;
     }
   }
 

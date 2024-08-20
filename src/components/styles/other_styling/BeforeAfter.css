@@ -91,7 +91,7 @@
     border: 2px solid var(--yellow);
     border-radius: 3px;
     cursor: pointer;
-    color: var(--darkest);
+    color: var(--lightest);
     align-self: flex-end;
     position: relative;
     z-index: 3;

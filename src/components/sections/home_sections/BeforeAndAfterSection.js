@@ -24,7 +24,6 @@ export const BeforeAndAfterSection = () => {
       <h3 className='section_subtitle'>Witness the Transformation: From Ordinary to Extraordinary</h3>
 
       <div className='before_and_after_inner'>
-        <p className={`hover_one baa_hover ${hoveredImage === 'one' ? 'fade-out-text' : ''}`}>Hover to view after</p>
         <div 
           className='baa_container baa_container_left'
           onMouseEnter={() => handleMouseEnter('one')}
@@ -42,7 +41,6 @@ export const BeforeAndAfterSection = () => {
           />
         </div>
 
-        <p className={`hover_two baa_hover ${hoveredImage === 'two' ? 'fade-out-text' : ''}`}>Hover to view after</p>
         <div 
           className='baa_container baa_container_right'
           onMouseEnter={() => handleMouseEnter('two')}

@@ -86,3 +86,10 @@
         flex-direction: column;
     }
 }
+
+
+@media (max-width: 450px) {
+    .footer_section_left {
+        margin-right: 50px;
+    }
+}

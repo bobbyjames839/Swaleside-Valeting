@@ -17,7 +17,9 @@ export const Services = () => {
   const ServiceSection = ({ image, title, desc, price }) => {
     return (
       <div className='service_content'>
-        <img src={image} alt={title} className='service_content_image' />
+        <div className='service_content_image_wrapper'>
+          <img src={image} alt={title} className='service_content_image' />
+        </div>
 
         <div className='service_content_inner'>
           <h3 className='service_inner_title'>{title}</h3>

@@ -188,3 +188,9 @@
         padding: 100px 0 90px 0;
     }
 }
+
+@media (max-width: 450px) {
+    .aum_button {
+        width: 140px;
+    }
+}
