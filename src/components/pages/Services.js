@@ -14,14 +14,14 @@ export const Services = () => {
     setOpenSection(section);
   };
 
-  const ServiceSection = ({ image, title, desc, price }) => {
+  const ServiceSection = ({ image, title, desc, price, classs }) => {
     return (
       <div className='service_content'>
         <div className='service_content_image_wrapper'>
           <img src={image} alt={title} className='service_content_image' />
         </div>
 
-        <div className='service_content_inner'>
+        <div className={`service_content_inner ${classs}`}>
           <h3 className='service_inner_title'>{title}</h3>
           <p className='service_inner_desc'>{desc}</p>
           <p className='service_inner_price'>{price}</p>
@@ -75,6 +75,7 @@ export const Services = () => {
             </>
           }
           price='From £100'
+          classs='service_content_inner_maintenance'
         />
       )}
 
@@ -92,6 +93,7 @@ export const Services = () => {
             </>
           }
           price='From £150'
+          classs='service_content_inner_deep'
         />
       )}
 
@@ -109,6 +111,7 @@ export const Services = () => {
             </>
           }
           price='From £200'
+          classs='service_content_inner_ceramic'
         />
       )}
     </div>
