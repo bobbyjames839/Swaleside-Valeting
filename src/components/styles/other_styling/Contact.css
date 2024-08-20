@@ -124,7 +124,7 @@
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    color: var(--darkest);
+    color: var(--lightest);
     transition: .3s;
     font-weight: 600;
     font-size: 12px;
