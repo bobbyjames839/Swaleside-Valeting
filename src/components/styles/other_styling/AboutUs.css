@@ -11,7 +11,7 @@
     height: 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: var(--darkyellow);
+    background-color: var(--yellow);
     color: var(--lightest);
     border: none;
     cursor: pointer;
@@ -70,7 +70,7 @@
 }
 
 .about_us_span {
-    background-color: var(--yellow);
+    background-color: var(--darkyellow);
     height: 2px;
     margin: 20px 0;
     width: 80%;
@@ -86,7 +86,7 @@
     width: 50%;
     margin-top: 20px;
     padding: 10px 30px;
-    background-color: var(--yellow);
+    background-color: var(--darkyellow);
     border: none;
     font-size: 14px;
     font-weight: 600;
@@ -97,7 +97,7 @@
 }
 
 .aum_button:hover {
-    background-color: var(--darkyellow);
+    background-color: var(--yellow);
 }
 
 .aum_image {
@@ -113,21 +113,21 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: var(--darker);
-    padding: 100px 0 150px 0;
+    background-color: var(--darkest);
+    padding: 0px 0 150px 0;
 }
 
 
 .aub_span {
     height: 2px;
-    background-color: var(--yellow);
+    background-color: var(--darkyellow);
     width: 350px;
     margin: 10px 0 100px 0;
 }
 
 .aub_inner_span {
     height: 2px;
-    background-color: var(--yellow);
+    background-color: var(--darkyellow);
     width: 50%;
     margin: 10px 0;
 }
@@ -166,7 +166,7 @@
     object-position: center;
     border-radius: 5px;
     border-top-right-radius: 40px;
-    box-shadow: 8px 8px 5px var(--yellow);
+    box-shadow: 8px 8px 5px var(--darkyellow);
 }
 
 @media (max-width: 800px) {

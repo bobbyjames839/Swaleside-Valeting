@@ -51,9 +51,9 @@
 
 .book_now {
   padding: 10px 20px;
-  background-color: var(--yellow);
+  background-color: var(--darkyellow);
   margin-left: 20px;
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--darkyellow);
   cursor: pointer;
   font-size: 16px;
   transition: .3s;
@@ -64,7 +64,7 @@
 
 .book_now:hover {
   background-color: transparent;
-  color: var(--yellow);
+  color: var(--darkyellow);
 }
 
 .toggle_nav_dropdown {

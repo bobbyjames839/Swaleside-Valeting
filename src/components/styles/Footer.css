@@ -78,7 +78,7 @@
 }
 
 .footer_social_link:hover {
-    color: var(--yellow);
+    color: var(--darkyellow);
 }
 
 @media (max-width: 900px) {

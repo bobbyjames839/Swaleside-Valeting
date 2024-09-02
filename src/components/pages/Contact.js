@@ -1,39 +1,54 @@
 import React, { useState } from 'react';
 import '../styles/other_styling/Contact.css';
+import emailjs from 'emailjs-com';
 
 export const Contact = () => {
     const [selectedService, setSelectedService] = useState('');
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        service: '' 
+    });
+    const [statusMessage, setStatusMessage] = useState('');
 
-    const FormInput = ({ prompt, type, placeholder }) => {
-        return (
-            <div className='form_input_outer'>
-                <p className='form_input_prompt'>{prompt}</p>
-                <input className='form_input' type={type} placeholder={placeholder} />
-            </div>
-        );
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
     };
 
-    const FormRadioGroup = ({ prompt, name, options }) => {
-        return (
-            <div className='form_radio'>
-                <p className='form_section_title'>{prompt}</p>
-                <div className='form_radio_inner'>
-                    {options.map((option, index) => (
-                        <div className='form_radio_item' key={index}>
-                            <input 
-                                type='radio' 
-                                id={`${name}-${index}`} 
-                                name={name} 
-                                value={option} 
-                                checked={selectedService === option} 
-                                onChange={(e) => setSelectedService(e.target.value)} 
-                            />
-                            <label htmlFor={`${name}-${index}`}>{option}</label>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        );
+    const handleSubmit = (e) => {
+        console.log(formData)
+        e.preventDefault();
+
+        // Send email using EmailJS
+        emailjs.send(
+            'service_96l851n', // Replace with your EmailJS service ID
+            'template_dmu8gio', // Replace with your EmailJS template ID
+            formData, 
+            '8cz9C4EQvPEbct7Cf' // Replace with your EmailJS user ID
+        )
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            setStatusMessage('Your message has been sent successfully!');
+            // Clear the form fields
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                message: '',
+                service: ''
+            });
+            setSelectedService(''); // Reset the selected service
+        })
+        .catch((err) => {
+            console.log('FAILED...', err);
+            setStatusMessage('Failed to send your message. Please try again.');
+        });
     };
 
     return (
@@ -45,27 +60,88 @@ export const Contact = () => {
                 <h1 className='form_title'>Get a free quote</h1>
                 <h5 className='form_subtitle'>Please fill out the form below and we will be in touch within 3 business days.</h5>
 
-                <FormInput prompt='Name' type='text' placeholder='Input name' />
-                <FormInput prompt='Email' type='email' placeholder='Input email' />
-                <FormInput prompt='Phone Number' type='tel' placeholder='Input phone number' />
+                <form onSubmit={handleSubmit}>
+                    <div className='form_input_outer'>
+                        <p className='form_input_prompt'>Name</p>
+                        <input 
+                            className='form_input' 
+                            type='text' 
+                            placeholder='Input name' 
+                            name='name'
+                            value={formData.name}
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                <FormRadioGroup 
-                    prompt='Select the service you are interested in' 
-                    name='service' 
-                    options={['service 1', 'service 2', 'service 3', 'This is not related to booking']} 
-                />
+                    <div className='form_input_outer'>
+                        <p className='form_input_prompt'>Email</p>
+                        <input 
+                            className='form_input' 
+                            type='email' 
+                            placeholder='Input email' 
+                            name='email'
+                            value={formData.email}
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                <div className='form_input_outer'>
-                    <p className='form_section_title'>
-                        {selectedService === 'This is not related to booking' 
-                            ? 'Please type your message below.' 
-                            : 'Tell us about your vehicle, ie size, condition etc.'}
-                    </p>
-                    <textarea className='form_textarea' placeholder='Type your message here...'></textarea>
-                </div>
+                    <div className='form_input_outer'>
+                        <p className='form_input_prompt'>Phone Number</p>
+                        <input 
+                            className='form_input' 
+                            type='tel' 
+                            placeholder='Input phone number' 
+                            name='phone'
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                        />
+                    </div>
 
-                <button className='form_submit'>Submit</button>
+                    <div className='form_radio'>
+                        <p className='form_section_title'>Select the service you are interested in</p>
+                        <div className='form_radio_inner'>
+                            {['Valeting', 'Detailing', 'Ceramic protection / paint protection', 'Other'].map((option, index) => (
+                                <div className='form_radio_item' key={index}>
+                                    <input 
+                                        type='radio' 
+                                        id={`service-${index}`} 
+                                        name='service' 
+                                        value={option} 
+                                        checked={selectedService === option} 
+                                        onChange={(e) => {
+                                            setSelectedService(e.target.value);
+                                            setFormData((prevData) => ({
+                                                ...prevData,
+                                                service: e.target.value
+                                            }));
+                                        }} 
+                                    />
+                                    <label htmlFor={`service-${index}`}>{option}</label>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className='form_input_outer'>
+                        <p className='form_section_title'>
+                            {selectedService === 'Other' 
+                                ? 'Please type your message below.' 
+                                : 'Tell us about your vehicle, ie size, condition etc.'}
+                        </p>
+                        <textarea 
+                            className='form_textarea' 
+                            placeholder='Type your message here...' 
+                            name='message'
+                            value={formData.message}
+                            onChange={handleInputChange}
+                        ></textarea>
+                    </div>
+
+                    <button className='form_submit' type='submit'>Submit</button>
+                </form>
+
+                {statusMessage && <p className="status_message">{statusMessage}</p>}
             </div>
         </div>
     );
-}
+};

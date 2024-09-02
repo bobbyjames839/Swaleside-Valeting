@@ -1,6 +1,7 @@
 import image1 from '../../images/image8.jpg';
 import image2 from '../../images/image13.jpg';
 import image3 from '../../images/image15.jpg';
+import image4 from '../../images/image12.jpg'
 import '../../styles/home_styling/Perks.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -58,6 +59,15 @@ export const Perks = () => {
           desc='Our team consists of highly trained and experienced technicians who are passionate about car care. They bring their expertise to every job, ensuring your car receives top-notch service every time.'
           button='Learn More'
           image={image3} />
+
+        <Perk 
+          title='Fully Qualified'
+          desc='Our team is professionally trained by Autoglym, ensuring we possess the highest standards in car care. With our Autoglym certification and passion for excellence, we deliver superior service to your vehicle every time.'
+          button='Learn More'
+          right={false}
+          classs='perk_left'
+          class_perk='perk_info_left' 
+          image={image4} />
       </div>
     </div>
   )

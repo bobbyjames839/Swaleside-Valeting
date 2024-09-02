@@ -7,15 +7,17 @@ import servicethree from '../images/image1.jpg'
 import { BeforeAndAfterSection } from '../sections/home_sections/BeforeAndAfterSection';
 import { Perks } from '../sections/home_sections/Perks';
 import { Reviews } from '../sections/home_sections/Reviews';
+import { Collabs } from '../sections/home_sections/Collabs';
 
 export const Home = () => {
   const navigate = useNavigate();
 
   const services = [
-    { price: 'From £100', desc: 'Our Car Detailing service provides meticulous care, ensuring every inch of your vehicle is spotless. We handle everything from the exterior wash to the interior deep clean, leaving your car looking and feeling brand new.', title: 'Car Detailing', image: servicethree },
-    { price: 'From £150', desc: 'Our Deep Clean service goes beyond the surface, targeting dirt and grime in hard-to-reach areas. We use high-quality products and equipment to rejuvenate your vehicle, making it sparkle from the inside out.', title: 'Deep Clean', image: serviceone },
-    { price: 'From £200', desc: 'Protect your vehicle’s paint with our Ceramic Protection service. This advanced treatment shields your car from the elements, giving it a long-lasting glossy finish that repels dirt and water.', title: 'Ceramic Protection', image: servicetwo },
-  ];
+    {desc: 'Our Car Detailing service provides meticulous care, ensuring every inch of your vehicle is spotless. We handle everything from the exterior wash to the interior deep clean, leaving your car looking and feeling brand new.', title: 'Detailing', image: servicethree },
+    {desc: 'Our Valeting service offers comprehensive care for your vehicle, including both interior and exterior cleaning. We pay attention to every detail, ensuring your car is clean, fresh, and ready for the road.', title: 'Valeting', image: serviceone },
+    {desc: 'Protect your vehicle’s paint with our Ceramic Protection and Paint Protection service. This advanced treatment shields your car from the elements, providing a durable, glossy finish that resists dirt, water, and UV rays.', title: 'Ceramic Protection / Paint Protection', image: servicetwo },
+];
+
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -64,7 +66,6 @@ export const Home = () => {
           <div className="service_item service_item_active">
             <img alt="Home" className="service_image" src={services[activeIndex].image} />
             <div className="service_inner">
-              <p className="service_price">{services[activeIndex].price}</p>
               <div className="service_inner_inner">
                 <h3 className="service_title">{services[activeIndex].title}</h3>
                 <p className="service_desc">{services[activeIndex].desc}</p>
@@ -82,6 +83,7 @@ export const Home = () => {
       </div>
 
       <Perks />
+      <Collabs/>
       <BeforeAndAfterSection />
       <Reviews />
     </div>

@@ -45,7 +45,7 @@ const reviews = [
 export const Reviews = () => {
   return (
     <div className='reviews'>
-      <h1 className="section_title">Our Services</h1>
+      <h1 className="section_title">Reviews</h1>
       <h3 className='section_subtitle'>Our Reputation Shines as Bright as Your Car</h3>
 
       <div className='reviews_scroller'>

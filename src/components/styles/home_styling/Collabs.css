@@ -1,0 +1,22 @@
+.collabs {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkest);
+    width: 100%;
+    align-items: center;
+}
+
+.collabs_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 50px 0;
+}
+
+.collab_image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}

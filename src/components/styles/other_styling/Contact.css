@@ -119,8 +119,8 @@
 .form_submit {
     height: 35px;
     width: 130px;
-    margin: 0 0 30px 40px;
-    background-color: var(--yellow);
+    margin: 0 0 10px 40px;
+    background-color: var(--darkyellow);
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -130,8 +130,13 @@
     font-size: 12px;
 }
 
+.status_message {
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+
 .form_submit:hover {
-    background-color: var(--darkyellow);
+    background-color: var(--yellow);
 }
 
 @media (max-width: 730px) {

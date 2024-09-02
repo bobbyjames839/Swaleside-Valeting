@@ -19,8 +19,8 @@ export const Footer = () => {
 
           <div className='footer_section'>
             <h3 className='footer_subtitle'>Contact</h3>
-            <p className='footer_para'>07786 241225</p>
-            <p className='footer_para'>commpany@gmail.com</p>
+            <p className='footer_para'>07715 639464</p>
+            <p className='footer_para'>info@swalesidevaleting.com</p>
             <p className='footer_para'>Thirsk, North Yorkshire</p>
           </div>
         </div>
@@ -28,10 +28,10 @@ export const Footer = () => {
         <div className='footer_right'>
           <img alt='Footer' className='footer_image' src={logo} />
           <div className='footer_socials'>
-            <a href='https://www.facebook.com' className='footer_social_link' aria-label="Facebook">
+            <a href='https://www.facebook.com/profile.php?id=61553292410630' className='footer_social_link' aria-label="Facebook">
               <FontAwesomeIcon icon={faFacebook}/>
             </a>
-            <a href='https://www.instagram.com' className='footer_social_link' aria-label="Instagram">
+            <a href='https://www.instagram.com/swalesidevaleting/' className='footer_social_link' aria-label="Instagram">
               <FontAwesomeIcon icon={faInstagram}/>
             </a>
           </div>

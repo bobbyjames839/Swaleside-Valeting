@@ -25,9 +25,9 @@
 
 :root {
   --green: rgb(0,128,0);
+  --yellow: rgb(193, 173, 23);
   --darkyellow: rgb(139, 124, 6);
-  --yellow: rgb(201, 181, 22);
-  --darkest: rgb(10,10,10);
+  --darkest: black;
   --darker: rgb(32,32,32);
   --dark: rgb(80,80,80);
   --lightest: rgb(235,235,235);

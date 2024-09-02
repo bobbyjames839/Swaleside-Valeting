@@ -9,7 +9,7 @@
     align-items: center;  
     overflow: hidden;
     position: relative;
-    background-color: var(--darker);
+    background-color: var(--darkest);
 }
 
 .reviews_scroller {
