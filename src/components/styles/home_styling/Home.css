@@ -186,10 +186,11 @@
 }
 
 .service_desc {
-    margin-left: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
     font-size: 13px;
     line-height: 1.5;
-    width: 90%;
+    width: 100%;
     flex-grow: 0;
     font-weight: 500;
     position: relative;
