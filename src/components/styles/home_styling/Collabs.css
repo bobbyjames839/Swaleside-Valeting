@@ -21,3 +21,10 @@
     object-position: center;
     border-radius: 10px;
 }
+
+@media (max-width: 800px) {
+    .collab_image {
+        margin: 20px 25px;
+        width: 90px;
+    }
+}

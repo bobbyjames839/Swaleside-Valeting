@@ -190,6 +190,7 @@
     font-size: 13px;
     line-height: 1.5;
     width: 90%;
+    flex-grow: 0;
     font-weight: 500;
     position: relative;
     z-index: 1;

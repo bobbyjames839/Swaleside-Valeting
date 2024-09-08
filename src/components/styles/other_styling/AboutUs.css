@@ -189,8 +189,8 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 650px) {
     .aum_button {
-        width: 140px;
+        width: 160px;
     }
 }
