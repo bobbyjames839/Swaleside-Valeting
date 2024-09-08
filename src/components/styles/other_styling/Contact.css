@@ -78,6 +78,7 @@
 .form_input {
     width: 80%;
     height: 28px;
+    box-sizing: border-box;
     padding-left: 10px;
     background-color: transparent;
     border: none;
@@ -124,8 +125,8 @@
 }
 
 .form_textarea {
-    flex-grow: 0;
     width: 100%;
+    box-sizing: border-box;
     background-color: transparent;
     border: 1px solid var(--dark);
     box-shadow: 0 0 10px var(--dark);

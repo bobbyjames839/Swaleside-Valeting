@@ -71,7 +71,7 @@
 .perk_span {
     background-color: var(--darkyellow);
     height: 100%;
-    width: 30px;
+    width: 20px;
     min-width: 15px;
     flex-shrink: 0;
 }
@@ -131,11 +131,20 @@
 @media (max-width: 850px) {
     .perk {
         width: 100%;
-        height: unset;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .perk {
+        height: 320px;
     }
   }
 
   @media (max-width: 450px) {
+    .perk {
+        height: 360px;
+    }
+
     .perk_button {
         width: 120px;
     }
