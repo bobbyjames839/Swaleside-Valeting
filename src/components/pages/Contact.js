@@ -40,10 +40,10 @@ export const Contact = () => {
         setStatusMessage('');
 
         emailjs.send(
-            'service_96l851n', 
-            'template_dmu8gio',
+            'service_ggsh3nj', 
+            'template_130qd9j',
             formData, 
-            '8cz9C4EQvPEbct7Cf' 
+            'TLZLhZvP-4ZkhKOeV' 
         )
         .then((response) => {
             console.log('SUCCESS!', response.status, response.text);

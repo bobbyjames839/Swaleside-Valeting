@@ -1,7 +1,7 @@
 import image1 from '../../images/main/image8.jpg';
 import image2 from '../../images/main/image13.jpg';
 import image3 from '../../images/main/image15.jpg';
-import image4 from '../../images/main/image12.jpg'
+import auto from '../../images/auto.png';
 import '../../styles/home_styling/Perks.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -67,7 +67,8 @@ export const Perks = () => {
           right={false}
           classs='perk_left'
           class_perk='perk_info_left' 
-          image={image4} />
+          image={auto} />
+          
       </div>
     </div>
   )

@@ -1,0 +1,23 @@
+      <div className='about_us_bottom'>
+        <h1 className='aub_title'>Meet the Team</h1>
+        <span className='aub_span'></span>
+
+        <div className='aub_inner'>
+          <div className='aub_item'>
+            <img src={headshot} className='aub_image' alt='Isaac Lowe'/>
+            <h3 className='about_us_name'>Isaac Lowe</h3>
+            <span className='aub_inner_span'></span>
+            <p className='aub_text'>
+              Isaac is the founder and lead technician at Swaleside Valeting. With over a decade of experience in the automotive industry, Isaac has honed his skills in car detailing and paint protection. His attention to detail and passion for cars are the driving forces behind the company's success.
+            </p>
+          </div>
+          <div className='aub_item'>
+            <img src={headshot} className='aub_image' alt='Jack Somerville'/>
+            <h3 className='about_us_name'>Jack Somerville</h3>
+            <span className='aub_inner_span'></span>
+            <p className='aub_text'>
+              Jack is Isaac's right-hand man, assisting with every aspect of the business. Whether it's helping with detailed car care or managing the day-to-day operations, Jack's reliability and work ethic make him an invaluable part of the Swaleside Valeting team. His hands-on approach and dedication ensure that every service meets the high standards that clients have come to expect from us.
+            </p>
+          </div>
+        </div>
+      </div>

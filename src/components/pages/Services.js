@@ -36,7 +36,7 @@ export const Services = () => {
     <div className="services">
       <div className='services_open'>
         <h1 className='section_title'>Our Services</h1>
-        <h3 className='section_subtitle'>We offer a variety of mobile valeting services.</h3>
+        <h3 className='section_subtitle'>We offer a variety of mobile / unit-based services.</h3>
       </div>
 
       <div className='service_buttons'>

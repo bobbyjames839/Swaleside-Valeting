@@ -9,6 +9,7 @@ import bus7 from '../../images/businesses/bus6.jpeg';
 import bus8 from '../../images/businesses/bus7.jpeg';
 import bus9 from '../../images/businesses/bus8.JPEG';
 import bus10 from '../../images/businesses/bus9.jpeg';
+import bus11 from '../../images/businesses/bus10.png';
 
 export const Collabs = () => {
     return (
@@ -25,6 +26,7 @@ export const Collabs = () => {
                 <img src={bus8} alt='Logo' className='collab_image'/>
                 <img src={bus9} alt='Logo' className='collab_image'/>
                 <img src={bus10} alt='Logo' className='collab_image'/>
+                <img src={bus11} alt='Logo' className='collab_image'/>
             </div>
         </div>
     );
