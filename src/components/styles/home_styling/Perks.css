@@ -73,6 +73,7 @@
     height: 100%;
     width: 30px;
     min-width: 15px;
+    flex-shrink: 0;
 }
 
 .perk_span_left {
@@ -145,6 +146,10 @@
 
     .perk_img {
         margin: 0 18px;
+    }
+
+    .perk_desc {
+        margin-bottom: 20px;
     }
   }
 
