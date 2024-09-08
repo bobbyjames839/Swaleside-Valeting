@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styles/home_styling/Reviews.css'; 
-import image from '../../images/main/image3.jpg'
 
 const reviews = [
     {
