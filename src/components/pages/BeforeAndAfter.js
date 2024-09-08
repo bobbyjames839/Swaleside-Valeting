@@ -80,7 +80,7 @@ export const BeforeAndAfter = () => {
         image1 = {before4}
         image2={after4}/>
 
-        <BeforeAfter name='Fiat Autotrail Camper Van'
+        <BeforeAfter name='Fiat Autotrail Van'
         image1 = {before5}
         image2={after5}/>
 
