@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/home_styling/Home.css';
-import serviceone from '../images/image2.jpg';
-import servicetwo from '../images/image10.jpg';
-import servicethree from '../images/image1.jpg'
+import serviceone from '../images/main/image2.jpg';
+import servicetwo from '../images/main/image10.jpg';
+import servicethree from '../images/main/image1.jpg'
 import { BeforeAndAfterSection } from '../sections/home_sections/BeforeAndAfterSection';
 import { Perks } from '../sections/home_sections/Perks';
 import { Reviews } from '../sections/home_sections/Reviews';

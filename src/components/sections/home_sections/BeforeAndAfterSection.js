@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import serviceone from '../../images/service_one.jpg';
-import servicetwo from '../../images/service_two.jpg';
-import home from '../../images/home.jpg';
+import before1 from '../../images/beforeafter/before5.jpeg';
+import after1 from '../../images/beforeafter/after5.jpeg';
+import before2 from '../../images/beforeafter/before7.jpeg';
+import after2 from '../../images/beforeafter/after7.jpeg';
 import '../../styles/home_styling/BeforeAndAfterSection.css'; 
 import { useNavigate } from 'react-router-dom';
 
@@ -30,12 +31,12 @@ export const BeforeAndAfterSection = () => {
           onMouseLeave={handleMouseLeave}
         >
           <img 
-            src={serviceone} 
+            src={before1} 
             className={`baa_image baa_one ${hoveredImage === 'one' ? 'shrink-width' : hoveredImage === 'two' ? 'dim-image' : ''}`}
             alt="Before"
           />
           <img 
-            src={home} 
+            src={after1} 
             className={`baa_image baa_two ${hoveredImage === 'one' ? 'grow-width' : ''}`}
             alt="After"
           />
@@ -47,12 +48,12 @@ export const BeforeAndAfterSection = () => {
           onMouseLeave={handleMouseLeave}
         >
           <img 
-            src={servicetwo} 
+            src={before2} 
             className={`baa_image baa_three ${hoveredImage === 'two' ? 'shrink-width' : hoveredImage === 'one' ? 'dim-image' : ''}`}
             alt="Before"
           />
           <img 
-            src={home} 
+            src={after2} 
             className={`baa_image baa_four ${hoveredImage === 'two' ? 'grow-width' : ''}`}
             alt="After"
           />

@@ -1,7 +1,7 @@
-import image1 from '../../images/image8.jpg';
-import image2 from '../../images/image13.jpg';
-import image3 from '../../images/image15.jpg';
-import image4 from '../../images/image12.jpg'
+import image1 from '../../images/main/image8.jpg';
+import image2 from '../../images/main/image13.jpg';
+import image3 from '../../images/main/image15.jpg';
+import image4 from '../../images/main/image12.jpg'
 import '../../styles/home_styling/Perks.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -55,8 +55,8 @@ export const Perks = () => {
           class_perk='perk_info_left' />
 
         <Perk 
-          title='Expert Technicians'
-          desc='Our team consists of highly trained and experienced technicians who are passionate about car care. They bring their expertise to every job, ensuring your car receives top-notch service every time.'
+          title='Skilled Valeting Professionals'
+          desc='Our team consists of highly trained and experienced valeting professionals who are passionate about car care. They bring their expertise to every job, ensuring your car receives top-notch service every time.'
           button='Learn More'
           image={image3} />
 

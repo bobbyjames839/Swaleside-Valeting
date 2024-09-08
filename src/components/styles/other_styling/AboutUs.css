@@ -25,7 +25,7 @@
     position: relative; 
     height: 400px;
     width: 100%;
-    background: url('../../images/image6.jpg') center/cover no-repeat;
+    background: url('../../images/main/image6.jpg') center/cover no-repeat;
     margin-bottom: 200px;
 }
 
@@ -36,7 +36,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .6); 
+    background-color: rgba(0, 0, 0, .4); 
     z-index: 1;
 }
 
@@ -51,7 +51,7 @@
     width: 80%;
     background-color: var(--darkest);
     box-shadow: 0 0 10px var(--lighter);
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 200px;
     max-width: 1200px;
     position: relative;
@@ -156,7 +156,7 @@
     font-size: 13px;
     width: 80%;
     letter-spacing: .25px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .aub_image {

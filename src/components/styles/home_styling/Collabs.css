@@ -8,15 +8,16 @@
 
 .collabs_inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 80%;
-    margin: 50px 0;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 35px 0;
 }
 
 .collab_image {
+    margin: 20px 50px;
     width: 120px;
-    height: 120px;
-    object-fit: cover;
+    object-position: center;
     border-radius: 10px;
 }

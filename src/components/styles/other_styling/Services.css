@@ -10,7 +10,7 @@
 
 .services_open {
     position: relative;
-    background: url('../../images/image6.jpg');
+    background: url('../../images/main/image6.jpg');
     height: 400px;
     width: 100%;
     background-position: center;
@@ -27,7 +27,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -80,10 +80,12 @@
     position: relative;
     overflow: hidden; /* Hide the overflow to crop the image */
     border-top-left-radius: 50px;
-    box-shadow: -5px -5px 10px var(--darkyellow);
+    box-shadow: -5px -5px 10px var(--lighter);
+    border-radius: 10px;
 }
 
 .service_content_image {
+    border-radius: 10px;
     position: absolute;
     top: 0;
     left: 0;
@@ -101,7 +103,7 @@
     padding: 0 20px;
     width: calc(45% - 40px);
     box-shadow: 0 0 10px var(--lighter);
-    border-radius: 5px;
+    border-radius: 10px;
     height: auto; 
 }
 
@@ -156,15 +158,15 @@
     }
 
     .service_content_inner_maintenance {
-        background: url('../../images/image7.jpg');
+        background: url('../../images/main/image7.jpg');
     }
 
     .service_content_inner_deep {
-        background: url('../../images/image14.jpg');
+        background: url('../../images/main/image14.jpg');
     }
 
     .service_content_inner_ceramic {
-        background: url('../../images/image11.jpg');
+        background: url('../../images/main/image11.jpg');
     }
 
     .service_content_inner {

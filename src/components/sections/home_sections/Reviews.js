@@ -1,46 +1,59 @@
 import React from 'react';
 import '../../styles/home_styling/Reviews.css'; 
-import image from '../../images/image3.jpg'
+import image from '../../images/main/image3.jpg'
 
 const reviews = [
     {
-      image: image,
-      name: 'John Doe',
-      date: '15/09/23',
-      desc: "Great service! The team was professional and attentive, exceeding our expectations with their attention to detail.",
-      stars: 5
+      name: 'Marie-Claire Pickard',
+      stars: 5,
+      desc: "Absolutely fantastic work by Jack, the car was utterly spotless inside and out, he was meticulous in his work.  Highly recommend, I would definitely use this company again."
     },
     {
-      image: image,
-      name: 'Jane Smith',
-      date: '22/10/23',
-      desc: "Amazing experience. The service was top-notch, and the staff went above and beyond. Highly recommended!",
-      stars: 4
+      name: 'Debbie Roberts',
+      stars: 5,
+      desc: "Professional, great experience, knowledgable about different products and fantastic job done. Had a ceramic coating and I would highly recommend this- it’s like glass. Thankyou Isaac, will definitely be back."
     },
     {
-      image: image,
-      name: 'Alice Johnson',
-      date: '11/02/23',
-      desc: "Professional and friendly staff. We felt valued and the team provided clear, knowledgeable explanations.",
-      stars: 5
+      name: 'Simon Parker',
+      stars: 5,
+      desc: "Made a fantastic job of my van. It’s never looked as clean. Car next?"
     },
     {
-      image: image,
-      name: 'Michael Brown',
-      date: '04/04/23',
-      desc: "Exceptional quality and attention to detail. Every step was handled with precision. Outstanding results.",
-      stars: 5
+      name: 'John Firth',
+      stars: 5,
+      desc: "Absolutely brilliant service from swaledale valeting. Got my car looking brand new and it was in a bad way before Issac worked his magic. Highly recommend!"
     },
     {
-      image: image,
-      name: 'Emily White',
-      date: '01/02/24',
-      desc: "Great customer support! The team was responsive, addressing all concerns promptly with excellent communication.",
-      stars: 4
+      name: 'Josh Bowskill',
+      stars: 5,
+      desc: "5/5 star service, 100% recommend and will use again, spent 9 hours cleaning my car and putting it back to showroom condition. "
     },
-  ];
-  
-  
+    {
+      name: 'Megan Knowlson',
+      stars: 5,
+      desc: "Absolute miracle workers, my car looks brand new again, highly recommend"
+    },
+    {
+      name: 'Joanne Rumbold',
+      stars: 5,
+      desc: "Thank you for a great job, my car is looking like new again!"
+    },
+    {
+      name: 'Jenny Bumby',
+      stars: 5,
+      desc: "Excellent proffesional company, really recommend, communication was spot on. Really pleased with results on our pick up, we will def be using you again. Thank you!!"
+    },
+    {
+      name: 'Ken Jackson',
+      stars: 5,
+      desc: "thanks Issac the car looks good , a professional outfit from first phone call ,I can really recommend this company."
+    },
+    {
+      name: 'Sky Ting Yip',
+      stars: 5,
+      desc: "Highly recommend, you definitely get what you have paid for"
+    },
+];
 
 export const Reviews = () => {
   return (
@@ -52,35 +65,13 @@ export const Reviews = () => {
         <div className='reviews_track'>
           {reviews.map((review, index) => (
             <div key={index} className='review_item'>
-                <div className='review_top'>
-                    <img src={review.image} alt={review.name} className='review_image' />
-                    <div className='review_top_right'>
-                        <h4 className='review_name'>{review.name}</h4>
-                        <p className='review_date'>{review.date}</p>
-                    </div>
-                </div>
-                <div className='review_stars'>
-                  {Array(review.stars).fill('★').join('')}
-                  {Array(5 - review.stars).fill('☆').join('')}
-                </div>
-                <p className='review_desc'>{review.desc}</p>
-            </div>
-
-          ))}
-          {reviews.map((review, index) => (
-            <div key={index} className='review_item'>
-                <div className='review_top'>
-                    <img src={review.image} alt={review.name} className='review_image' />
-                    <div className='review_top_right'>
-                        <h4 className='review_name'>{review.name}</h4>
-                        <p className='review_date'>{review.date}</p>
-                    </div>
-                </div>
-                <div className='review_stars'>
-                  {Array(review.stars).fill('★').join('')}
-                  {Array(5 - review.stars).fill('☆').join('')}
-                </div>
-                <p className='review_desc'>{review.desc}</p>
+              <span className='review_span'></span>
+              <h4 className='review_name'>{review.name}</h4>
+              <p className='review_stars'>
+                {Array(review.stars).fill('★').join('')}
+                {Array(5 - review.stars).fill('☆').join('')}
+              </p>
+              <p className='review_desc'>{review.desc}</p>
             </div>
           ))}
         </div>
