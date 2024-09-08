@@ -131,15 +131,10 @@
     .perk {
         width: 100%;
         height: unset;
-        padding: 15px 0;
     }
   }
 
   @media (max-width: 450px) {
-    .perk {
-        height: 280px;
-    }
-
     .perk_button {
         width: 120px;
     }

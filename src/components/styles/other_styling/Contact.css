@@ -180,6 +180,18 @@
     .contact_inner {
         width: calc(100% - 40px);
     }
+
+    .form_input {
+        width: 100%;
+    } 
+    
+    .form_section_title {
+        width: 100%;
+    }
+
+    .form_textarea {
+        width: 100%;
+    }
 }
 
 /* In your Contact.css file */
