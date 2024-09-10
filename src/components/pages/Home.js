@@ -14,7 +14,7 @@ export const Home = () => {
 
   const services = [
     {desc: 'Our Car Detailing service provides meticulous care, ensuring every inch of your vehicle is spotless. We handle everything from the exterior wash to the interior deep clean, leaving your car looking and feeling brand new.', title: 'Detailing', image: servicethree },
-    {desc: 'Our Valeting service offers comprehensive care for your vehicle, including both interior and exterior cleaning. We pay attention to every detail, ensuring your car is clean, fresh, and ready for the road.', title: 'Valeting', image: serviceone },
+    {desc: 'Our Valeting service offers comprehensive care for your vehicle, including both interior and exterior cleaning. We pay attention to every detail, ensuring your car is clean, fresh, and ready for the road.', title: 'Mobile Valeting', image: serviceone },
     {desc: 'Protect your vehicle’s paint with our Ceramic Protection and Paint Protection service. This advanced treatment shields your car from the elements, providing a durable, glossy finish that resists dirt, water, and UV rays.', title: 'Ceramic Protection / Paint Protection', image: servicetwo },
 ];
 

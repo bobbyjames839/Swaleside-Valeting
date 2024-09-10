@@ -50,7 +50,7 @@ export const Services = () => {
           className={`service_page_button ${openSection === 'Valeting' ? 'active_service_button' : ''}`}
           onClick={() => handleButtonClick('Valeting')}
         >
-          Valeting
+          Mobile Valeting
         </button>
         <button 
           className={`service_page_button ${openSection === 'Ceramic Protection / Paint Protection' ? 'active_service_button' : ''}`}

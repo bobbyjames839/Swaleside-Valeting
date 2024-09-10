@@ -1,7 +1,7 @@
 import image1 from '../../images/main/image8.jpg';
-import image2 from '../../images/main/image13.jpg';
-import image3 from '../../images/main/image15.jpg';
-import auto from '../../images/auto.png';
+import image2 from '../../images/main/image16.jpg';
+import image3 from '../../images/main/image13.jpg';
+import auto from '../../images/auto.jpg';
 import '../../styles/home_styling/Perks.css';
 import { useNavigate } from 'react-router-dom';
 

@@ -9,7 +9,7 @@
     background-color: var(--darker);
     color: var(--lightest);
     position: relative;
-    background: url('../../images/main/image6.jpg') center/cover no-repeat;
+    background: url('../../images/main/image15.jpg') center/cover no-repeat;
 }
 
 .why_choose::before {
