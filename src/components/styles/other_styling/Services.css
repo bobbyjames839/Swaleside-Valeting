@@ -10,7 +10,7 @@
 
 .services_open {
     position: relative;
-    background: url('../../images/main/image2.jpg');
+    background: url('../../images/main/image2.webp');
     height: 400px;
     width: 100%;
     background-position: center;
@@ -158,15 +158,15 @@
     }
 
     .service_content_inner_detailing {
-        background: url('../../images/main/image7.jpg');
+        background: url('../../images/main/image7.webp');
     }
 
     .service_content_inner_valeting {
-        background: url('../../images/main/image14.jpg');
+        background: url('../../images/main/image14.webp');
     }
 
     .service_content_inner_ceramic {
-        background: url('../../images/main/image11.jpg');
+        background: url('../../images/main/image11.webp');
     }
 
     .service_content_inner {

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/other_styling/Services.css';
 import { useNavigate } from 'react-router-dom';
-import image7 from '../images/main/image7.jpg';
-import image11 from '../images/main/image11.jpg';
-import image14 from '../images/main/image14.jpg';
+import image7 from '../images/main/image7.webp';
+import image11 from '../images/main/image11.webp';
+import image14 from '../images/main/image14.webp';
 
 export const Services = () => {
   const [openSection, setOpenSection] = useState('Detailing');

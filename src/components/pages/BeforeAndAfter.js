@@ -1,25 +1,25 @@
 import { useState } from 'react';
 import '../styles/other_styling/BeforeAfter.css';
-import before1 from '../images/beforeafter/before5.jpeg';
-import after1 from '../images/beforeafter/after5.jpeg';
-import before2 from '../images/beforeafter/before7.jpeg';
-import after2 from '../images/beforeafter/after7.jpeg';
-import before3 from '../images/beforeafter/before1.jpeg';
-import after3 from '../images/beforeafter/after1.jpeg';
-import before4 from '../images/beforeafter/before2.jpeg';
-import after4 from '../images/beforeafter/after2.jpeg';
-import before5 from '../images/beforeafter/before3.jpeg';
-import after5 from '../images/beforeafter/after3.jpeg';
-import before6 from '../images/beforeafter/before4.jpeg';
-import after6 from '../images/beforeafter/after4.jpeg';
-import before7 from '../images/beforeafter/before6.jpeg';
-import after7 from '../images/beforeafter/after6.jpeg';
-import before8 from '../images/beforeafter/before8.jpeg';
-import after8 from '../images/beforeafter/after8.jpeg';
-import before9 from '../images/beforeafter/before9.jpeg';
-import after9 from '../images/beforeafter/after9.jpeg';
-import before10 from '../images/beforeafter/before10.jpeg';
-import after10 from '../images/beforeafter/after10.jpeg';
+import before1 from '../images/beforeafter/before5.webp';
+import after1 from '../images/beforeafter/after5.webp';
+import before2 from '../images/beforeafter/before7.webp';
+import after2 from '../images/beforeafter/after7.webp';
+import before3 from '../images/beforeafter/before1.webp';
+import after3 from '../images/beforeafter/after1.webp';
+import before4 from '../images/beforeafter/before2.webp';
+import after4 from '../images/beforeafter/after2.webp';
+import before5 from '../images/beforeafter/before3.webp';
+import after5 from '../images/beforeafter/after3.webp';
+import before6 from '../images/beforeafter/before4.webp';
+import after6 from '../images/beforeafter/after4.webp';
+import before7 from '../images/beforeafter/before6.webp';
+import after7 from '../images/beforeafter/after6.webp';
+import before8 from '../images/beforeafter/before8.webp';
+import after8 from '../images/beforeafter/after8.webp';
+import before9 from '../images/beforeafter/before9.webp';
+import after9 from '../images/beforeafter/after9.webp';
+import before10 from '../images/beforeafter/before10.webp';
+import after10 from '../images/beforeafter/after10.webp';
 
 export const BeforeAndAfter = () => {
 

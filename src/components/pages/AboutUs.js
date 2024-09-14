@@ -1,5 +1,5 @@
 import '../styles/other_styling/AboutUs.css';
-import image1 from '../images/main/image1.jpg';
+import image1 from '../images/main/image1.webp';
 import { useNavigate } from 'react-router-dom';
 
 export const AboutUs = () => {

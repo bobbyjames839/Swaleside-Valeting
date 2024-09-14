@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/home_styling/Home.css';
-import serviceone from '../images/main/image2.jpg';
-import servicetwo from '../images/main/image10.jpg';
-import servicethree from '../images/main/image1.jpg'
+import serviceone from '../images/main/image2.webp';
+import servicetwo from '../images/main/image10.webp';
+import servicethree from '../images/main/image1.webp'
 import { BeforeAndAfterSection } from '../sections/home_sections/BeforeAndAfterSection';
 import { Perks } from '../sections/home_sections/Perks';
 import { Reviews } from '../sections/home_sections/Reviews';
@@ -11,15 +11,15 @@ import { Collabs } from '../sections/home_sections/Collabs';
 
 export const Home = () => {
   const navigate = useNavigate();
+  const servicesRef = useRef(null); // Reference to the services section
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isServicesVisible, setIsServicesVisible] = useState(false); // State to track visibility
 
   const services = [
     {desc: 'Our Car Detailing service provides meticulous care, ensuring every inch of your vehicle is spotless. We handle everything from the exterior wash to the interior deep clean, leaving your car looking and feeling brand new.', title: 'Detailing', image: servicethree },
     {desc: 'Our Valeting service offers comprehensive care for your vehicle, including both interior and exterior cleaning. We pay attention to every detail, ensuring your car is clean, fresh, and ready for the road.', title: 'Mobile Valeting', image: serviceone },
     {desc: 'Protect your vehicle’s paint with our Ceramic Protection and Paint Protection service. This advanced treatment shields your car from the elements, providing a durable, glossy finish that resists dirt, water, and UV rays.', title: 'Ceramic Protection / Paint Protection', image: servicetwo },
-];
-
-
-  const [activeIndex, setActiveIndex] = useState(0);
+  ];
 
   const goToNextService = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
@@ -39,6 +39,31 @@ export const Home = () => {
     return activeIndex;
   };
 
+  // Intersection Observer to track when the services section becomes visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsServicesVisible(true); // Set to true when the section is visible
+            observer.unobserve(entry.target); // Unobserve after it becomes visible to prevent re-render
+          }
+        });
+      },
+      { threshold: 0.2 } // 20% of the section needs to be visible for it to trigger
+    );
+
+    if (servicesRef.current) {
+      observer.observe(servicesRef.current);
+    }
+
+    return () => {
+      if (servicesRef.current) {
+        observer.unobserve(servicesRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="home page">
       <div className="home_open">
@@ -53,37 +78,39 @@ export const Home = () => {
         </div>
       </div>
 
-      <div className="home_services">
+      <div className="home_services" ref={servicesRef}>
         <h1 className="section_title">Our Services</h1>
         <h3 className="section_subtitle">Bringing the Best to Your Vehicle</h3>
-        <div className="home_services_inner">
-          <button className="carousel_button carousel_left" onClick={goToPrevService}>‹</button>
+        {isServicesVisible && (
+          <div className="home_services_inner">
+            <button className="carousel_button carousel_left" onClick={goToPrevService}>‹</button>
 
-          <div className="service_item_background service_item_left">
-            <img alt="Background Left" className="service_image_blurred" src={services[getBackgroundIndex('left')].image} />
-          </div>
+            <div className="service_item_background service_item_left">
+              <img alt="Background Left" className="service_image_blurred" src={services[getBackgroundIndex('left')].image} />
+            </div>
 
-          <div className="service_item service_item_active">
-            <img alt="Home" className="service_image" src={services[activeIndex].image} />
-            <div className="service_inner">
-              <div className="service_inner_inner">
-                <h3 className="service_title">{services[activeIndex].title}</h3>
-                <p className="service_desc">{services[activeIndex].desc}</p>
-                <button onClick={() => navigate('/services')} className="service_button">Read More</button>
+            <div className="service_item service_item_active">
+              <img alt="Home" className="service_image" src={services[activeIndex].image} />
+              <div className="service_inner">
+                <div className="service_inner_inner">
+                  <h3 className="service_title">{services[activeIndex].title}</h3>
+                  <p className="service_desc">{services[activeIndex].desc}</p>
+                  <button onClick={() => navigate('/services')} className="service_button">Read More</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="service_item_background service_item_right">
-            <img alt="Background Right" className="service_image_blurred" src={services[getBackgroundIndex('right')].image} />
-          </div>
+            <div className="service_item_background service_item_right">
+              <img alt="Background Right" className="service_image_blurred" src={services[getBackgroundIndex('right')].image} />
+            </div>
 
-          <button className="carousel_button carousel_right" onClick={goToNextService}>›</button>
-        </div>
+            <button className="carousel_button carousel_right" onClick={goToNextService}>›</button>
+          </div>
+        )}
       </div>
 
       <Perks />
-      <Collabs/>
+      <Collabs />
       <BeforeAndAfterSection />
       <Reviews />
     </div>

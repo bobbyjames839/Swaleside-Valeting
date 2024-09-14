@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
 import '../styles/Nav.css'
-import logo from '../images/logo/logo.png'
+import logo from '../images/logo/logo.webp'
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';

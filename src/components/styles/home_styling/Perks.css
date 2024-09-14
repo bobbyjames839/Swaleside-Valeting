@@ -9,7 +9,7 @@
     background-color: var(--darker);
     color: var(--lightest);
     position: relative;
-    background: url('../../images/main/image15.jpg') center/cover no-repeat;
+    background: url('../../images/main/image15.webp') center/cover no-repeat;
 }
 
 .why_choose::before {
@@ -35,6 +35,16 @@
     max-width: 1400px;
 }
 
+.perk_outer_right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.perk_outer_left {
+    width: 100%;
+}
+
 .perk {
     display: flex;
     background-color: var(--darkest);
@@ -44,18 +54,49 @@
     margin-bottom: 80px;
     align-items: center;
     border-radius: 20px;
-    transition: .5s;
     color: var(--lightest);
+    visibility: hidden;
 }
+
+.perk.perk_right_animate, .perk.perk_left_animate {
+    visibility: visible;
+}
+
+.perk_right_animate {
+    opacity: 1;
+    animation: perkRight .8s ease-out forwards;
+}
+
+@keyframes perkRight {
+    from {
+        opacity: 0;  /* Start at 0 */
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;  /* End at 1 */
+        transform: translateX(0);
+    }
+}
+
+.perk_left_animate {
+    opacity: 1;
+    animation: perkLeft .8s ease-out forwards;
+}
+
+@keyframes perkLeft {
+    from {
+        opacity: 0;  /* Start at 0 */
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;  /* End at 1 */
+        transform: translateX(0);
+    }
+}
+
 
 .perk:hover {
     transform: scale(1.05);
-}
-
-.perk_right {
-    align-self: flex-end;
-    text-align: right;
-    justify-content: flex-end;
 }
 
 .perk_img {    
