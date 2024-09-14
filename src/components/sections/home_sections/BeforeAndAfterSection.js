@@ -7,9 +7,10 @@ import '../../styles/home_styling/BeforeAndAfterSection.css';
 import { useNavigate } from 'react-router-dom';
 
 export const BeforeAndAfterSection = () => {
-  const [hoveredImage, setHoveredImage] = useState(null);
   const [isBeforeAfterVisible, setIsBeforeAfterVisible] = useState(false); // For visibility
+  const [hoveredImage, setHoveredImage] = useState(null);
   const beforeAfterRef = useRef(null); // Reference to the section
+  const observerRef = useRef(null); // Cache observer
 
   const navigate = useNavigate();
 
@@ -23,27 +24,30 @@ export const BeforeAndAfterSection = () => {
 
   // Intersection Observer to track when the before & after section becomes visible
   useEffect(() => {
-    const currentRef = beforeAfterRef.current; // Store the current value of the ref
+    const currentRef = beforeAfterRef.current;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsBeforeAfterVisible(true); // Set to true when visible
-            observer.unobserve(entry.target); // Unobserve after becoming visible
-          }
-        });
-      },
-      { threshold: 0.2 } // Trigger when 20% of the section is visible
-    );
+    // Lazy load only when the observer is triggered
+    if (!observerRef.current) {
+      observerRef.current = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsBeforeAfterVisible(true);
+              observerRef.current.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+    }
 
     if (currentRef) {
-      observer.observe(currentRef);
+      observerRef.current.observe(currentRef);
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
+      if (currentRef && observerRef.current) {
+        observerRef.current.unobserve(currentRef);
       }
     };
   }, []);
@@ -62,13 +66,15 @@ export const BeforeAndAfterSection = () => {
           >
             <img 
               src={before1} 
+              alt="Before" 
+              loading="lazy" // Lazy loading
               className={`baa_image baa_one ${hoveredImage === 'one' ? 'shrink-width' : hoveredImage === 'two' ? 'dim-image' : ''}`}
-              alt="Before"
             />
             <img 
               src={after1} 
+              alt="After" 
+              loading="lazy" // Lazy loading
               className={`baa_image baa_two ${hoveredImage === 'one' ? 'grow-width' : ''}`}
-              alt="After"
             />
           </div>
 
@@ -79,19 +85,21 @@ export const BeforeAndAfterSection = () => {
           >
             <img 
               src={before2} 
+              alt="Before" 
+              loading="lazy" // Lazy loading
               className={`baa_image baa_three ${hoveredImage === 'two' ? 'shrink-width' : hoveredImage === 'one' ? 'dim-image' : ''}`}
-              alt="Before"
             />
             <img 
               src={after2} 
+              alt="After" 
+              loading="lazy" // Lazy loading
               className={`baa_image baa_four ${hoveredImage === 'two' ? 'grow-width' : ''}`}
-              alt="After"
             />
           </div>
         </div>
       )}
 
-      <button onClick={() => (navigate('/before_and_after'))} className='view_more_baa'>View more</button>
+      <button onClick={() => navigate('/before_and_after')} className='view_more_baa'>View more</button>
     </div>
   );
 };
