@@ -1,10 +1,11 @@
+import React, { useEffect, useRef } from 'react';
+import { Img } from 'react-image';
+import '../../styles/home_styling/Perks.css';
 import image1 from '../../images/main/image8.webp';
 import image2 from '../../images/main/image16.webp';
 import image3 from '../../images/main/image13.webp';
 import auto from '../../images/auto.webp';
-import '../../styles/home_styling/Perks.css';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
 
 export const Perks = () => {
   const navigate = useNavigate();
@@ -14,27 +15,26 @@ export const Perks = () => {
     const isVisible = useRef(false);
 
     useEffect(() => {
-      const currentRef = perkRef.current; // Store the current ref value
+      const currentRef = perkRef.current;
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting && !isVisible.current) {
-              isVisible.current = true; // Mark as visible
+              isVisible.current = true;
               const animationClass = right ? 'perk_right_animate' : 'perk_left_animate';
-              entry.target.classList.add(animationClass); // Add animation class
-              observer.unobserve(entry.target); // Stop observing once visible
+              entry.target.classList.add(animationClass);
+              observer.unobserve(entry.target);
             }
           });
         },
-        { threshold: 0.2 } // Trigger when 20% of the element is visible
+        { threshold: 0.2 }
       );
 
       if (currentRef) {
         observer.observe(currentRef);
       }
 
-      // Cleanup observer on component unmount
       return () => {
         if (currentRef) {
           observer.unobserve(currentRef);
@@ -47,7 +47,13 @@ export const Perks = () => {
         {!right && (
           <>
             <span className={`perk_span ${right ? 'perk_span_right' : 'perk_span_left'}`}></span>
-            <img alt="Perk" className="perk_img" src={image} />
+            <Img 
+              alt="Perk" 
+              className="perk_img" 
+              src={image} 
+              loader={<div>Loading...</div>} 
+              unloader={<div>Error loading image</div>} 
+            />
           </>
         )}
 
@@ -61,7 +67,13 @@ export const Perks = () => {
 
         {right && (
           <>
-            <img alt="Perk" className="perk_img" src={image} />
+            <Img 
+              alt="Perk" 
+              className="perk_img" 
+              src={image} 
+              loader={<div>Loading...</div>} 
+              unloader={<div>Error loading image</div>} 
+            />
             <span className={`perk_span ${right ? 'perk_span_right' : 'perk_span_left'}`}></span>
           </>
         )}

@@ -1,4 +1,5 @@
 import '../styles/other_styling/AboutUs.css';
+import { Img } from 'react-image';
 import image1 from '../images/main/image1.webp';
 import { useNavigate } from 'react-router-dom';
 
@@ -37,7 +38,13 @@ export const AboutUs = () => {
             Contact Us
           </button>
         </div>
-        <img src={image1} className='aum_image' alt='About us' />
+        <Img 
+          src={image1} 
+          className='aum_image' 
+          alt='About us' 
+          loader={<div>Loading...</div>} 
+          unloader={<div>Error loading image</div>}
+        />
       </div>
     </div>
   );

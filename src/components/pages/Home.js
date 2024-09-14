@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Img } from 'react-image';
 import '../styles/home_styling/Home.css';
 import serviceone from '../images/main/image2.webp';
 import servicetwo from '../images/main/image10.webp';
@@ -11,9 +12,9 @@ import { Collabs } from '../sections/home_sections/Collabs';
 
 export const Home = () => {
   const navigate = useNavigate();
-  const servicesRef = useRef(null); // Reference to the services section
+  const servicesRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isServicesVisible, setIsServicesVisible] = useState(false); // State to track visibility
+  const [isServicesVisible, setIsServicesVisible] = useState(false);
 
   const services = [
     {
@@ -51,20 +52,19 @@ export const Home = () => {
     return activeIndex;
   };
 
-  // Intersection Observer to track when the services section becomes visible
   useEffect(() => {
-    const currentRef = servicesRef.current; // Store the current value of the ref
+    const currentRef = servicesRef.current;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsServicesVisible(true); // Set to true when the section is visible
-            observer.unobserve(entry.target); // Unobserve after it becomes visible to prevent re-render
+            setIsServicesVisible(true);
+            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.2 } // 20% of the section needs to be visible for it to trigger
+      { threshold: 0.2 }
     );
 
     if (currentRef) {
@@ -106,20 +106,22 @@ export const Home = () => {
             </button>
 
             <div className="service_item_background service_item_left">
-              <img
+              <Img
                 alt="Background Left"
                 className="service_image_blurred"
                 src={services[getBackgroundIndex('left')].image}
-                loading="lazy"
+                loader={<div>Loading...</div>}
+                unloader={<div>Error loading image</div>}
               />
             </div>
 
             <div className="service_item service_item_active">
-              <img
+              <Img
                 alt="Home"
                 className="service_image"
                 src={services[activeIndex].image}
-                loading="lazy"
+                loader={<div>Loading...</div>}
+                unloader={<div>Error loading image</div>}
               />
               <div className="service_inner">
                 <div className="service_inner_inner">
@@ -133,11 +135,12 @@ export const Home = () => {
             </div>
 
             <div className="service_item_background service_item_right">
-              <img
+              <Img
                 alt="Background Right"
                 className="service_image_blurred"
                 src={services[getBackgroundIndex('right')].image}
-                loading="lazy"
+                loader={<div>Loading...</div>}
+                unloader={<div>Error loading image</div>}
               />
             </div>
 

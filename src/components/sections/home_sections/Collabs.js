@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Img } from 'react-image';
 import '../../styles/home_styling/Collabs.css';
 import bus1 from '../../images/businesses/bus.webp';
 import bus2 from '../../images/businesses/bus1.webp';
@@ -48,17 +49,17 @@ export const Collabs = () => {
             <h1 className="section_title">Businesses we've worked with</h1>
             {isCollabsVisible && (
                 <div className="collabs_inner">
-                    <img src={bus1} alt='Logo' className='collab_image' />
-                    <img src={bus2} alt='Logo' className='collab_image' />
-                    <img src={bus3} alt='Logo' className='collab_image' />
-                    <img src={bus4} alt='Logo' className='collab_image' />
-                    <img src={bus5} alt='Logo' className='collab_image' />
-                    <img src={bus6} alt='Logo' className='collab_image' />
-                    <img src={bus7} alt='Logo' className='collab_image' />
-                    <img src={bus8} alt='Logo' className='collab_image' />
-                    <img src={bus9} alt='Logo' className='collab_image' />
-                    <img src={bus10} alt='Logo' className='collab_image' />
-                    <img src={bus11} alt='Logo' className='collab_image' />
+                    <Img src={bus1} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus2} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus3} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus4} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus5} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus6} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus7} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus8} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus9} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus10} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
+                    <Img src={bus11} alt='Logo' className='collab_image' loader={<div>Loading...</div>} unloader={<div>Error loading image</div>} />
                 </div>
             )}
         </div>

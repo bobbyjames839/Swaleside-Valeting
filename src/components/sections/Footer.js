@@ -1,4 +1,6 @@
+import React from 'react';
 import '../styles/Footer.css';
+import { Img } from 'react-image';
 import logo from '../images/logo/logo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -26,13 +28,19 @@ export const Footer = () => {
         </div>
 
         <div className='footer_right'>
-          <img alt='Footer' className='footer_image' src={logo} />
+          <Img 
+            alt='Footer Logo' 
+            className='footer_image' 
+            src={logo} 
+            loader={<div>Loading...</div>} 
+            unloader={<div>Error loading image</div>}
+          />
           <div className='footer_socials'>
             <a href='https://www.facebook.com/profile.php?id=61553292410630' className='footer_social_link' aria-label="Facebook">
-              <FontAwesomeIcon icon={faFacebook}/>
+              <FontAwesomeIcon icon={faFacebook} />
             </a>
             <a href='https://www.instagram.com/swalesidevaleting/' className='footer_social_link' aria-label="Instagram">
-              <FontAwesomeIcon icon={faInstagram}/>
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
         </div>
@@ -41,4 +49,4 @@ export const Footer = () => {
       <p className='footer_note'>Developed by Bobby.</p>
     </div>
   );
-}
+};

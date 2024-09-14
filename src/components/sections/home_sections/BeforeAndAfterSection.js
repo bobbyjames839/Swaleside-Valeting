@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Img } from 'react-image';
 import before1 from '../../images/beforeafter/before5.webp';
 import after1 from '../../images/beforeafter/after5.webp';
 import before2 from '../../images/beforeafter/before7.webp';
@@ -7,10 +8,10 @@ import '../../styles/home_styling/BeforeAndAfterSection.css';
 import { useNavigate } from 'react-router-dom';
 
 export const BeforeAndAfterSection = () => {
-  const [isBeforeAfterVisible, setIsBeforeAfterVisible] = useState(false); // For visibility
+  const [isBeforeAfterVisible, setIsBeforeAfterVisible] = useState(false); 
   const [hoveredImage, setHoveredImage] = useState(null);
-  const beforeAfterRef = useRef(null); // Reference to the section
-  const observerRef = useRef(null); // Cache observer
+  const beforeAfterRef = useRef(null); 
+  const observerRef = useRef(null); 
 
   const navigate = useNavigate();
 
@@ -64,17 +65,19 @@ export const BeforeAndAfterSection = () => {
             onMouseEnter={() => handleMouseEnter('one')}
             onMouseLeave={handleMouseLeave}
           >
-            <img 
+            <Img 
               src={before1} 
               alt="Before" 
-              loading="lazy" // Lazy loading
               className={`baa_image baa_one ${hoveredImage === 'one' ? 'shrink-width' : hoveredImage === 'two' ? 'dim-image' : ''}`}
+              loader={<div>Loading...</div>} // Optional loader
+              unloader={<div>Error loading image</div>} // Optional error handler
             />
-            <img 
+            <Img 
               src={after1} 
               alt="After" 
-              loading="lazy" // Lazy loading
               className={`baa_image baa_two ${hoveredImage === 'one' ? 'grow-width' : ''}`}
+              loader={<div>Loading...</div>}
+              unloader={<div>Error loading image</div>}
             />
           </div>
 
@@ -83,17 +86,19 @@ export const BeforeAndAfterSection = () => {
             onMouseEnter={() => handleMouseEnter('two')}
             onMouseLeave={handleMouseLeave}
           >
-            <img 
+            <Img 
               src={before2} 
               alt="Before" 
-              loading="lazy" // Lazy loading
               className={`baa_image baa_three ${hoveredImage === 'two' ? 'shrink-width' : hoveredImage === 'one' ? 'dim-image' : ''}`}
+              loader={<div>Loading...</div>}
+              unloader={<div>Error loading image</div>}
             />
-            <img 
+            <Img 
               src={after2} 
               alt="After" 
-              loading="lazy" // Lazy loading
               className={`baa_image baa_four ${hoveredImage === 'two' ? 'grow-width' : ''}`}
+              loader={<div>Loading...</div>}
+              unloader={<div>Error loading image</div>}
             />
           </div>
         </div>
