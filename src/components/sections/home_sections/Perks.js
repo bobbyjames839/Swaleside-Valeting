@@ -95,6 +95,7 @@ export const Perks = () => {
             button="Learn More"
             image={image1}
             right={true}
+            class_perk="perk_info_right"
           />
         </div>
 
@@ -118,6 +119,7 @@ export const Perks = () => {
             button="Learn More"
             image={image3}
             right={true}
+            class_perk="perk_info_right"
           />
         </div>
 

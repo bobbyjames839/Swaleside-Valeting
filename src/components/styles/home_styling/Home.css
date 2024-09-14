@@ -91,12 +91,12 @@
 
 /* Services Section */
 .home_services {
-    padding-bottom: 150px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--darkest);
+    height: 800px;
 }
 
 
