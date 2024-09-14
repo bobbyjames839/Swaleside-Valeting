@@ -14,6 +14,8 @@ export const Perks = () => {
     const isVisible = useRef(false);
 
     useEffect(() => {
+      const currentRef = perkRef.current; // Store the current ref value
+
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -28,14 +30,14 @@ export const Perks = () => {
         { threshold: 0.2 } // Trigger when 20% of the element is visible
       );
 
-      if (perkRef.current) {
-        observer.observe(perkRef.current);
+      if (currentRef) {
+        observer.observe(currentRef);
       }
 
       // Cleanup observer on component unmount
       return () => {
-        if (perkRef.current) {
-          observer.unobserve(perkRef.current);
+        if (currentRef) {
+          observer.unobserve(currentRef);
         }
       };
     }, [right]);

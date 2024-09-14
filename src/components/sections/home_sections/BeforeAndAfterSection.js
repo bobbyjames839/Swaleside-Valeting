@@ -23,6 +23,8 @@ export const BeforeAndAfterSection = () => {
 
   // Intersection Observer to track when the before & after section becomes visible
   useEffect(() => {
+    const currentRef = beforeAfterRef.current; // Store the current value of the ref
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -35,13 +37,13 @@ export const BeforeAndAfterSection = () => {
       { threshold: 0.2 } // Trigger when 20% of the section is visible
     );
 
-    if (beforeAfterRef.current) {
-      observer.observe(beforeAfterRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (beforeAfterRef.current) {
-        observer.unobserve(beforeAfterRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

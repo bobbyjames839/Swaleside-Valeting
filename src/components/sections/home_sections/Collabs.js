@@ -18,6 +18,8 @@ export const Collabs = () => {
 
     // Intersection Observer to track when the collabs section becomes visible
     useEffect(() => {
+        const currentRef = collabsRef.current; // Store the current value of the ref
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -30,13 +32,13 @@ export const Collabs = () => {
             { threshold: 0.2 } // Trigger when 20% of the section is visible
         );
 
-        if (collabsRef.current) {
-            observer.observe(collabsRef.current);
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (collabsRef.current) {
-                observer.unobserve(collabsRef.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);
