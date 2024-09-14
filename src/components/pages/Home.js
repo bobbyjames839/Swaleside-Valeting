@@ -99,9 +99,8 @@ export const Home = () => {
       <div className="home_services" ref={servicesRef}>
         <h1 className="section_title">Our Services</h1>
         <h3 className="section_subtitle">Bringing the Best to Your Vehicle</h3>
-          <div className="home_services_inner">
           {isServicesVisible && (
-            <>
+          <div className="home_services_inner">
             <button className="carousel_button carousel_left" onClick={goToPrevService}>
               ‹
             </button>
@@ -148,8 +147,7 @@ export const Home = () => {
             <button className="carousel_button carousel_right" onClick={goToNextService}>
               ›
             </button>
-          </>)}
-          </div>
+          </div>)}
       </div>
 
       <Perks />
