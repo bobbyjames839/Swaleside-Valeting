@@ -60,8 +60,8 @@ export const Services = () => {
           Mobile Valeting
         </button>
         <button 
-          className={`service_page_button ${openSection === 'Ceramic Protection / Paint Protection' ? 'active_service_button' : ''}`}
-          onClick={() => handleButtonClick('Ceramic Protection / Paint Protection')}
+          className={`service_page_button ${openSection === 'Ceramic Protection / Paint Correction' ? 'active_service_button' : ''}`}
+          onClick={() => handleButtonClick('Ceramic Protection / Paint Correction')}
         >
           Ceramic Protection 
         </button>
@@ -101,13 +101,13 @@ export const Services = () => {
         />
       )}
 
-      {openSection === 'Ceramic Protection / Paint Protection' && (
+      {openSection === 'Ceramic Protection / Paint Correction' && (
         <ServiceSection
           image={image11}
-          title='Ceramic Protection / Paint Protection'
+          title='Ceramic Protection / Paint Correction'
           desc={
             <>
-              <p>Our Ceramic Protection and Paint Protection service offers the latest in car care technology, providing a durable and long-lasting shield for your vehicle’s paintwork. We begin by thoroughly decontaminating the paint surface to remove any impurities, followed by a machine polish that enhances the gloss and removes minor imperfections.</p>
+              <p>Our Ceramic Protection and Paint Correction service offers the latest in car care technology, providing a durable and long-lasting shield for your vehicle’s paintwork. We begin by thoroughly decontaminating the paint surface to remove any impurities, followed by a machine polish that enhances the gloss and removes minor imperfections.</p>
               <br />
               <p>Once the surface is prepared, we apply a high-quality ceramic coating that bonds with the paint, creating a protective layer that is resistant to UV rays, chemicals, and environmental pollutants. This coating also has hydrophobic properties, making your car easier to clean as dirt and water bead off the surface.</p>
               <br />
